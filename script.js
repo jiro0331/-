@@ -3,14 +3,17 @@ const wordList = [
 { japanese: "走る", english: "run" }, 
 { japanese: "大きい", english: "big" } 
 ]; 
+
 function generateWordList() { 
 const container = document.getElementById("wordContainer"); 
 wordList.forEach((word, index) => { 
 const block = document.createElement("div");
+
 // 日本語表示 
 const jp = document.createElement("p"); 
 jp.textContent = `意味：${word.japanese}`; 
 block.appendChild(jp); 
+
 // 英語表示ボタン 
 const button = document.createElement("button"); 
 button.textContent = "英語を見る・聞く"; 
